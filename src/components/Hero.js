@@ -90,7 +90,7 @@ const Hero = () => {
                 fluid={data.file.childImageSharp.fluid}
             />
             <H1Header className="hero__header" text="Taste on Our Hands!" />
-            <p>WELLCOME</p>
+            <p>WELCOME</p>
             <img className="double__chevron__down" src={DoubleChevronDown} alt="double chevron down" />
         </HeroWrapper>
     )

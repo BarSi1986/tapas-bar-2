@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Layout from '../Layout/Layout'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 const AppWrapper = styled.div`
     transition: .2s ease;
@@ -19,6 +20,7 @@ export default () => {
             <Navigation />
             <AppWrapper className="main__app__wrapper">
                 <Hero />
+                <About />
             </AppWrapper>
         </Layout>
     )
