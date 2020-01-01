@@ -1,6 +1,9 @@
 import React from "react"
 import Navigation from '../components/Navigation'
-import { createGlobalStyle } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
+
+import Hero from '../components/Hero'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -13,11 +16,37 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const theme = {
+    // colors
+    main_red: "#FF0000",
+    main_white: "#FFFFFF",
+
+    // fonts
+    header1_font: "'Qwigley', cursive",
+    header2_font: "'Open Sans', sans-serif",
+
+    // transitions
+    main_transition: "all 0.7s cubic-bezier(.17,.67,0,.99)",
+}
+
+const AppWrapper = styled.div`
+    transition: .2s ease;
+    &.moved{
+        transform: translateY(80px);
+        filter: blur(15px);
+    }
+`
+
 export default () => {
     return (
-        <React.Fragment>
-            <GlobalStyle />
-            <Navigation />
-        </React.Fragment>
+        <ThemeProvider theme={theme}>
+            <React.Fragment>
+                <GlobalStyle />
+                <Navigation />
+                <AppWrapper className="main__app__wrapper">
+                    <Hero />
+                </AppWrapper>
+            </React.Fragment>
+        </ThemeProvider>
     )
 }
