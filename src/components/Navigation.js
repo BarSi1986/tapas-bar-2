@@ -29,7 +29,6 @@ overflow: hidden;
     height: 100px;
     padding-bottom: 10px;
     z-index: 20;
-    
 }
 .nav__wrapper__desktop{
     @media (max-width: 749px) {
@@ -40,9 +39,9 @@ overflow: hidden;
     .nav__item__desktop{
         list-style: none;
         button{
-            padding: 34px 5px;
+            padding: 20px 5px;
             background:none;
-            margin: 40px;
+            margin: 0 40px;
             cursor: pointer;
             border: none;
             font-family: ${props => props.theme.header2_font};
@@ -56,7 +55,7 @@ overflow: hidden;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                height: 45px;
+                height: 30px;
                 background: rgb(255, 244, 128);
                 z-index: -1;
                 transition: ${props => props.theme.main_transition};
