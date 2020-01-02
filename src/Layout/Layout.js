@@ -18,6 +18,7 @@ const theme = {
     main_red: "#FF0000",
     main_white: "#FFFFFF",
     main_para: "#808080",
+    primary_button: "#ff7d65",
 
     // fonts
     header1_font: "'Qwigley', cursive",

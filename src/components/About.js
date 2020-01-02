@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Header from '../components/H2_header'
 import Para from '../components/Paragraph'
+import Button from '../components/PrimaryButton'
 
 const AboutWrapper = styled.section`
 display: flex;
@@ -24,6 +25,7 @@ const About = () => {
         <AboutWrapper>
             <Header normalTxt='WELCOME TO OUR' cursiveTxt="Tapas Bar" />
             <Para text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, exercitationem cupiditate et, eius odio molestiae ad qui doloremque est nesciunt consequuntur assumenda laborum voluptatibus vel ipsa dicta, aspernatur eos tenetur officiis rerum. Dolorem adipisci cum earum doloribus? Hic, provident autem" />
+            <Button text="MAKE A RESERVATION" />
         </AboutWrapper>
     )
 }
