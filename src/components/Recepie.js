@@ -45,25 +45,29 @@ const TextSection = styled.div`
 
 const Recepie = () => {
     const data = useStaticQuery(graphql`
-    query MyQuery {
-        allImageSharp {
-          nodes {
+    query RecepieImagesQuery {
+        image1: file(relativePath: {eq: "cooking-hands.jpeg"}) {
+          childImageSharp {
             fluid {
                 ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2: file(relativePath: {eq: "cooking-pot.png"}) {
+          childImageSharp {
+            fluid {
+                ...GatsbyImageSharpFluid    
             }
           }
         }
       }
     `)
 
-    console.log(data);
-
-
     return (
         <RecepieWrapper>
             <div>
                 <StyledImgBig
-                    fluid={data.allImageSharp.nodes[7].fluid}
+                    fluid={data.image1.childImageSharp.fluid}
                 />
             </div>
 
@@ -72,7 +76,7 @@ const Recepie = () => {
                     <Header txt="MAKE EVERY COOKING A SPECIAL MOMENT" />
                 </div>
                 <StyledImgSmall
-                    fluid={data.allImageSharp.nodes[6].fluid}
+                    fluid={data.image2.childImageSharp.fluid}
                 />
 
                 <Para text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora exercitationem voluptatibus provident laborum temporibus corporis ex aut eum libero fugiat." />
