@@ -18,7 +18,9 @@ const theme = {
     main_red: "#FF0000",
     main_white: "#FFFFFF",
     main_para: "#808080",
+    secondary_header: "#FF7E66",
     primary_button: "#ff7d65",
+    background_one: "#FFE3DD",
 
     // fonts
     header1_font: "'Qwigley', cursive",

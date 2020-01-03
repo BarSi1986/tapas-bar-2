@@ -5,6 +5,7 @@ import Layout from '../Layout/Layout'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Recepie from '../components/Recepie'
 
 const AppWrapper = styled.div`
     transition: .2s ease;
@@ -21,6 +22,7 @@ export default () => {
             <AppWrapper className="main__app__wrapper">
                 <Hero />
                 <About />
+                <Recepie />
             </AppWrapper>
         </Layout>
     )

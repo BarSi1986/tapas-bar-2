@@ -10,7 +10,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 100px 200px;
+padding: 70px 200px;
 @media (max-width: 1000px) {
     padding: 100px 120px;
 }
