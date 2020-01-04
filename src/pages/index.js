@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Recepie from '../components/Recepie'
+import Specials from '../components/Specials'
 
 const AppWrapper = styled.div`
     transition: .2s ease;
@@ -23,6 +24,7 @@ export default () => {
                 <Hero />
                 <About />
                 <Recepie />
+                <Specials />
             </AppWrapper>
         </Layout>
     )
