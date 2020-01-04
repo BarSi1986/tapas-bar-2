@@ -15,7 +15,8 @@ padding: 70px 200px;
     padding: 100px 120px;
 }
 @media (max-width: 750px) {
-    padding: 80px 15px;
+    padding: 10px 15px;
+    padding-top: 40px;
     align-items: flex-start;
 }
 `

@@ -15,14 +15,21 @@ const RecepieWrapper = styled.div`
         position: relative;
         width: 100%;
     }
+    @media (max-width: 750px) {
+        flex-direction: column;
+        height: inherit;
+    }
 `
 
 const StyledImgBig = styled(Img)`
-    position: absolute !important;
+    /* position: absolute !important; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    @media (max-width: 750px) {
+        height: 60vh;
+    }
 `
 
 const StyledImgSmall = styled(Img)`
@@ -40,6 +47,18 @@ const TextSection = styled.div`
     padding: 0 70px;
     .header__wrapper{
         padding: 0 130px;
+    }
+    @media (max-width: 1100px) {
+        padding: 0 40px;
+        .header__wrapper{
+        padding: 0 15px;
+    }
+    }
+    @media (max-width: 750px) {
+        padding: 40px 15px;
+        p{
+            text-align: center;
+        }
     }
 `
 

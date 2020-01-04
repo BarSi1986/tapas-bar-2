@@ -7,6 +7,9 @@ const HeaderWrapper = styled.div`
         font-family: ${props => props.theme.header2_font};
         font-weight: 400;
         color: ${props => props.theme.secondary_header};
+        @media (max-width: 750px) {
+        font-size: 1.9em;
+    }
     }
 `
 
