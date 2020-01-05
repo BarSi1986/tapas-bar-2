@@ -42,6 +42,11 @@ display: flex;
         &:hover{
             right: 35px;
         }
+        @media (max-width: 750px){
+            right: 50%;
+            transform: translateX(50%);
+            top: 50px;
+        }
     }
 }
 .image2{
@@ -52,6 +57,11 @@ display: flex;
         cursor: pointer;
         &:hover{
             left: 35px;
+        }
+        @media (max-width: 750px){
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -190px;   
         }
     }
 }
@@ -86,13 +96,18 @@ p{
     bottom: 0;
     opacity: 0;
 }
+@media (max-width: 750px) {
+    width: 90%;
+    h1{
+        font-size: 3.5em;
+    }
+}
 `
 
 
 
 const DescriptionWrapper2 = styled.div`
 position: absolute;
-
 right: 30px;
 width: 50%;
 text-align: right;
@@ -108,14 +123,26 @@ p{
     top: 0px;
 &.effect{
     filter: blur(0px);
-    top: 10px;
+    top: 20px;
     opacity: 1;
+}
+@media (max-width: 750px) {
+    width: 90%;
+    h1{
+        font-size: 3.5em;
+    }
+    &.effect{
+        top: 20px;
+    }
 }
 `
 
 
 const Chevron = styled(Img)`
  width: 50px;
+ @media (max-width: 750px){
+     width: 35px;
+ }
 `
 
 const BestDishes = () => {
@@ -160,7 +187,6 @@ const BestDishes = () => {
         setTimeout(() => {
             wrapper.classList.toggle('moved')
         }, 300)
-
     }
 
     const sideEffects1 = () => {
