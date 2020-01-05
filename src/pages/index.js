@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Recepie from '../components/Recepie'
 import Specials from '../components/Specials'
+import BestDishes from '../components/BestDishes'
 
 const AppWrapper = styled.div`
     transition: .2s ease;
@@ -25,6 +26,7 @@ export default () => {
                 <About />
                 <Recepie />
                 <Specials />
+                <BestDishes />
             </AppWrapper>
         </Layout>
     )
