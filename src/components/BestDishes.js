@@ -46,6 +46,9 @@ display: flex;
             right: 50%;
             transform: translateX(50%);
             top: 50px;
+            &:hover{
+                right: 49%;
+            }
         }
     }
 }
@@ -61,7 +64,11 @@ display: flex;
         @media (max-width: 750px){
             left: 50%;
             transform: translateX(-50%);
-            bottom: -190px;   
+            bottom: -190px; 
+            &:hover{
+                left: 51%;
+            }
+              
         }
     }
 }

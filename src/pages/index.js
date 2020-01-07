@@ -13,7 +13,7 @@ const AppWrapper = styled.div`
     transition: .2s ease;
     &.moved{
         transform: translateY(80px);
-        filter: blur(15px);
+        filter: blur(5px);
     }
 `
 

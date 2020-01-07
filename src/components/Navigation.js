@@ -19,10 +19,10 @@ box-shadow: 0px 1px 3px -2px #000;
 display: flex;
 justify-content: space-around;
 align-items: center;
-overflow: hidden;
 
 @media (max-width: 749px) {
     justify-content: flex-start;
+    overflow: visible;
     }
 .logo{
 
@@ -107,7 +107,7 @@ overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    z-index: 15;
     transform: translateY(-100%);
 
     &.clicked{
