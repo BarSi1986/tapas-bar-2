@@ -31,6 +31,9 @@ display: flex;
         padding: 0 40px;
         transition: ${props => props.theme.main_transition};
         outline: none;
+        @media (max-width: 750px){
+            padding: 0 15px;
+        }
     }
 }
 .image1{
@@ -54,8 +57,8 @@ display: flex;
 }
 .image2{
     .chevron-left{
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 50%;
+        transform: translateY(50%);
         left: 60px;
         cursor: pointer;
         &:hover{
@@ -64,7 +67,7 @@ display: flex;
         @media (max-width: 750px){
             left: 50%;
             transform: translateX(-50%);
-            bottom: -190px; 
+            bottom: 50px;
             &:hover{
                 left: 51%;
             }
