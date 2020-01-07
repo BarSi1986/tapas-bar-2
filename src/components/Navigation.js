@@ -80,7 +80,7 @@ align-items: center;
      display: none;   
     }
         position: absolute;
-        top: 35px;
+        top: 20px;
         right: 25px;
         list-style: none;
             button{
@@ -88,6 +88,7 @@ align-items: center;
              outline: none;
              background: transparent;
              border: none;
+             padding: 20px;
         }
     }
 
@@ -142,7 +143,7 @@ align-items: center;
     }
     .menuClose{
         position: absolute;
-        top: 15px;
+        top: 2px;
         right: 10px;
         list-style: none;
         button{
@@ -153,6 +154,7 @@ align-items: center;
             transform: rotate(180deg);
             transition: .4s ease;
             transition-delay: .2s;
+            padding: 20px;
         }
     }
 
