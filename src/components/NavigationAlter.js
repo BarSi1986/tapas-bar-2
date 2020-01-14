@@ -153,48 +153,58 @@ const BurgerMenuIcon = styled.div`
 `;
 
 const NavigationAlter = () => {
-    const handleMobileMenu = () => {
-        const navMenu = document.querySelector(NavListWrapper);
-        const navIcon = document.querySelector(BurgerMenuIcon)
-        const navItems = document.querySelectorAll(NavItem);
-        const appWrapper = document.querySelector("#main__app__wrapper");
-        const spans = document.querySelectorAll("span");
-        navMenu.classList.toggle("open");
-        navIcon.classList.toggle('open')
-        appWrapper.classList.toggle('open')
-        navItems.forEach(item => {
-            item.classList.toggle("open");
-        });
-        spans.forEach(span => {
-            span.classList.toggle("open");
-        });
-    };
+  const handleMobileMenu = () => {
+    const navMenu = document.querySelector(NavListWrapper);
+    const navIcon = document.querySelector(BurgerMenuIcon)
+    const navItems = document.querySelectorAll(NavItem);
+    const appWrapper = document.querySelector("#main__app__wrapper");
+    const spans = document.querySelectorAll("span");
+    navMenu.classList.toggle("open");
+    navIcon.classList.toggle('open')
+    appWrapper.classList.toggle('open')
+    navItems.forEach(item => {
+      item.classList.toggle("open");
+    });
+    spans.forEach(span => {
+      span.classList.toggle("open");
+    });
+  };
 
-    return (
-        <NavComponentWrapper>
-            {/* left side logo */}
-            <NavLogo>
-                <img src={logo} alt="tapas bar logo" />
-            </NavLogo>
-            <NavListWrapper>
-                {/* right side nav items */}
-                <NavItem>HOME</NavItem>
-                <NavItem>ABOUT US</NavItem>
-                <NavItem>RESERVATION</NavItem>
-                <NavItem>MENU</NavItem>
-                <NavItem>CONTACT</NavItem>
-            </NavListWrapper>
-            {/* hamburger menu */}
-            <MenuIconButton onClick={handleMobileMenu}>
-                <BurgerMenuIcon>
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                </BurgerMenuIcon>
-            </MenuIconButton>
-        </NavComponentWrapper>
-    );
+  return (
+    <NavComponentWrapper>
+      {/* left side logo */}
+      <NavLogo>
+        <img src={logo} alt="tapas bar logo" />
+      </NavLogo>
+      <NavListWrapper>
+        {/* right side nav items */}
+        <li className='nav__item__desktop'>
+          <button>HOME</button>
+        </li>
+        <li className='nav__item__desktop'>
+          <button>ABOUT</button>
+        </li>
+        <li className='nav__item__desktop'>
+          <button>MENU</button>
+        </li>
+        <li className='nav__item__desktop'>
+          <button>RESERVATION</button>
+        </li>
+        <li className='nav__item__desktop'>
+          <button>CONTACTS</button>
+        </li>
+      </NavListWrapper>
+      {/* hamburger menu */}
+      <MenuIconButton onClick={handleMobileMenu}>
+        <BurgerMenuIcon>
+          <span />
+          <span />
+          <span />
+          <span />
+        </BurgerMenuIcon>
+      </MenuIconButton>
+    </NavComponentWrapper>
+  );
 };
 
 export default NavigationAlter;

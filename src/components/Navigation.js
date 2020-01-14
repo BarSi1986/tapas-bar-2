@@ -166,8 +166,8 @@ const Navigation = () => {
     const menuClicked = () => {
         const menu = document.querySelector('.nav__wrapper__mobile')
         menu.classList.toggle('clicked')
-        const wholeApp = document.querySelector('.main__app__wrapper')
-        wholeApp.classList.toggle('moved')
+        // const wholeApp = document.querySelector('.main__app__wrapper')
+        // wholeApp.classList.toggle('open')
     }
     return (
         <NavWrapper>
