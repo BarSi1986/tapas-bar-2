@@ -16,12 +16,6 @@ const HeroWrapper = styled.section`
     justify-content: center;
     align-items: center;
 
-    transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
-    &.open{
-        transform: translateY(80px);
-        filter: blur(5px);
-    }
-
     @media (max-width: 750px) {
         text-align: center;
         height: 100vh;
