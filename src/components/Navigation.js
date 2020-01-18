@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 
 import logo from '../images/logo.png'
 import menuOpen from '../images/menu-icon-open.png'
 import menuClose from '../images/menu-icon-close.png'
+
+import AppContext from '../context/AppContext'
 
 
 const NavWrapper = styled.section`
@@ -111,7 +113,7 @@ align-items: center;
     z-index: 15;
     transform: translateY(-100%);
 
-    &.clicked{
+    &.open{
         transform: translateY(0);
         .nav__item__mobile{
             transform: translateY(0px);
@@ -163,12 +165,12 @@ align-items: center;
 
 const Navigation = () => {
 
+    const { isOpen, setIsOpen } = useContext(AppContext)
+
     const menuClicked = () => {
-        const menu = document.querySelector('.nav__wrapper__mobile')
-        menu.classList.toggle('clicked')
-        // const wholeApp = document.querySelector('.main__app__wrapper')
-        // wholeApp.classList.toggle('open')
+        setIsOpen(!isOpen)
     }
+
     return (
         <NavWrapper>
             <img className="logo" src={logo} alt="company logo" />
@@ -197,7 +199,7 @@ const Navigation = () => {
                 </button>
             </li>
 
-            <ul className='nav__wrapper__mobile'>
+            <ul className={isOpen ? 'nav__wrapper__mobile open' : 'nav__wrapper__mobile'}>
                 <li className='nav__item__mobile'>
                     <button onClick={() => {
                         menuClicked()

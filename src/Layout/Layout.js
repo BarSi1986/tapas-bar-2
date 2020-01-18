@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import 'normalize.css';
+import AppContext from '../context/AppContext'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -33,13 +34,20 @@ const theme = {
 }
 
 const Layout = ({ children }) => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
-        <ThemeProvider theme={theme}>
-            <React.Fragment>
-                <GlobalStyle />
-                {children}
-            </React.Fragment>
-        </ThemeProvider>
+        <AppContext.Provider value={{ isOpen, setIsOpen }}>
+            <ThemeProvider
+                theme={theme}
+            >
+                <React.Fragment>
+                    <GlobalStyle />
+                    {children}
+                </React.Fragment>
+            </ThemeProvider>
+        </AppContext.Provider>
 
     )
 }

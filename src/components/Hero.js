@@ -2,12 +2,9 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import DoubleChevronDown from '../images/chevronDoubleDown.png'
-
 import Img from 'gatsby-image'
 
 import H1Header from './H1_header'
-
-
 
 const HeroWrapper = styled.section`
     position: relative;
@@ -18,6 +15,13 @@ const HeroWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
+    &.open{
+        transform: translateY(80px);
+        filter: blur(5px);
+    }
+
     @media (max-width: 750px) {
         text-align: center;
         height: 100vh;
