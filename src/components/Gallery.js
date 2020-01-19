@@ -153,6 +153,10 @@ const Para = styled.p`
     opacity: 0;
     transition: ${props => props.theme.main_transition};
     transition-delay: .2s;
+
+    @media (max-width: 800px) {
+        font-size: 1.5em;
+    }
 `
 
 const Gallery = () => {
@@ -231,7 +235,7 @@ const Gallery = () => {
                 <StyledImg
                     fluid={data.image2.childImageSharp.fluid}
                 />
-                <Para>GRILLD CORN</Para>
+                <Para>GRILLED CORN</Para>
             </GalleryItem>
             <GalleryItem>
                 <StyledImg
