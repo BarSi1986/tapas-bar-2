@@ -25,6 +25,38 @@ const GalleryWrapper = styled.section`
 
 const GalleryItem = styled.div`
     position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after{
+        content: "";
+        width: 0%;
+        height: 0%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    &:hover{ 
+        p{
+            opacity: 1;
+        }
+        &::after{
+            content: "";
+            transition: ${props => props.theme.main_transition};
+            position: absolute;
+            background: rgba(190, 1, 1, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            z-index: -1;
+        }
+    }
+
+
     &:nth-of-type(1){
         grid-column: 1 / 2;
         grid-row: 1;
@@ -41,6 +73,13 @@ const GalleryItem = styled.div`
             font-weight: bold;
  
         }
+        &:hover{
+        &::after{
+            background: transparent;
+            width: 0%;
+            height: 0%;
+        }
+    }
     }
     &:nth-of-type(3){
         grid-column: 3 / 5;
@@ -104,6 +143,18 @@ const StyledImg = styled(Img)`
     z-index: -1;
 `
 
+const Para = styled.p`
+    font-family: ${props => props.theme.header2_font};
+    color: ${props => props.theme.main_white};
+    font-size: 2.2em;
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+    transition: ${props => props.theme.main_transition};
+    transition-delay: .2s;
+`
+
 const Gallery = () => {
 
     const data = useStaticQuery(graphql`
@@ -159,6 +210,7 @@ const Gallery = () => {
                 <StyledImg
                     fluid={data.image1.childImageSharp.fluid}
                 />
+                <Para>SALTY STICKS</Para>
             </GalleryItem>
             <GalleryItem>
                 <Header txt="GALLERY" />
@@ -167,21 +219,25 @@ const Gallery = () => {
                 <StyledImg
                     fluid={data.image3.childImageSharp.fluid}
                 />
+                <Para>FREESTYLE SNACKS</Para>
             </GalleryItem>
             <GalleryItem>
                 <StyledImg
                     fluid={data.image4.childImageSharp.fluid}
                 />
+                <Para>TASTY TORTILLAS</Para>
             </GalleryItem>
             <GalleryItem>
                 <StyledImg
                     fluid={data.image2.childImageSharp.fluid}
                 />
+                <Para>GRILLD CORN</Para>
             </GalleryItem>
             <GalleryItem>
                 <StyledImg
                     fluid={data.image6.childImageSharp.fluid}
                 />
+                <Para>TOP BURGERS</Para>
             </GalleryItem>
         </GalleryWrapper>
     )
