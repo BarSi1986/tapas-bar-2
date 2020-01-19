@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Header from './H3_header'
+import Header from '../UI_Components/H3_header'
 
 const GalleryWrapper = styled.section`
     width: 100%;

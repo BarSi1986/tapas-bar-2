@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Header from '../components/H2_header'
-import Para from '../components/Paragraph'
-import Button from '../components/PrimaryButton'
+import Header from '../UI_Components/H2_header'
+import Para from '../UI_Components/Paragraph'
 
 const AboutWrapper = styled.section`
 display: flex;
@@ -21,14 +20,13 @@ padding: 70px 200px;
 }
 `
 
-const About = () => {
+const AboutBlog = () => {
     return (
         <AboutWrapper>
-            <Header normalTxt='WELCOME TO OUR' cursiveTxt="Tapas Bar" />
+            <Header normalTxt='OUR' cursiveTxt="BLog" />
             <Para text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, exercitationem cupiditate et, eius odio molestiae ad qui doloremque est nesciunt consequuntur assumenda laborum voluptatibus vel ipsa dicta, aspernatur eos tenetur officiis rerum. Dolorem adipisci cum earum doloribus? Hic, provident autem" />
-            <Button text="MAKE A RESERVATION" />
         </AboutWrapper>
     )
 }
 
-export default About
+export default AboutBlog

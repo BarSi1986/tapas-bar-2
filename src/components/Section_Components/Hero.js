@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import DoubleChevronDown from '../images/chevronDoubleDown.png'
+import DoubleChevronDown from '../../images/chevronDoubleDown.png'
 import Img from 'gatsby-image'
 
-import H1Header from './H1_header'
+import H1Header from '../UI_Components/H1_header'
 
 const HeroWrapper = styled.section`
     position: relative;

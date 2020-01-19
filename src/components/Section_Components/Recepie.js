@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Header from '../components/H3_header'
-import Para from '../components/Paragraph'
+import Header from '../UI_Components/H3_header'
+import Para from '../UI_Components/Paragraph'
 
-const RecepieWrapper = styled.div`
+const RecepieWrapper = styled.section`
     height: 70vh;
     width: 100%;
     background: ${props => props.theme.background_one};

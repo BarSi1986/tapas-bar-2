@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Header from '../components/H1_header'
-import Button from '../components/OutlinedButton'
-import AppContext from '../context/AppContext'
+import Header from '../UI_Components/H1_header'
+import Button from '../UI_Components/OutlinedButton'
+import AppContext from '../../context/AppContext'
 
 const DishWrapper = styled.section`
 height: 90vh;

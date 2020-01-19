@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 
-import logo from '../images/logo.png'
-import menuOpen from '../images/menu-icon-open.png'
-import menuClose from '../images/menu-icon-close.png'
+import logo from '../../images/logo.png'
+import menuOpen from '../../images/menu-icon-open.png'
+import menuClose from '../../images/menu-icon-close.png'
 
-import AppContext from '../context/AppContext'
+import AppContext from '../../context/AppContext'
 
 
 const NavWrapper = styled.section`

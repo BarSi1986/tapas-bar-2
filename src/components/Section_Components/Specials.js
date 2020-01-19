@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Header from '../components/H2_header'
-import Para from '../components/Paragraph'
-import Button from '../components/PrimaryButton'
+import Header from '../UI_Components/H2_header'
+import Para from '../UI_Components/Paragraph'
+import Button from '../UI_Components/PrimaryButton'
 
 const SpecialsWrapper = styled.section`
 display: flex;

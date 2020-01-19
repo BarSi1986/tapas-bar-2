@@ -2,14 +2,14 @@ import React, { useContext } from 'react'
 import AppContext from '../context/AppContext'
 import styled from 'styled-components'
 
-import Hero from './Hero'
-import About from './About'
-import Recepie from './Recepie'
-import Specials from './Specials'
-import BestDishes from './BestDishes'
-import Services from './Services'
-import Gallery from './Gallery'
-import AboutBlog from './AboutBlog'
+import Hero from '../components/Section_Components/Hero'
+import About from '../components/Section_Components/About'
+import Recepie from '../components/Section_Components/Recepie'
+import Specials from '../components/Section_Components/Specials'
+import BestDishes from '../components/Section_Components/BestDishes'
+import Services from '../components/Section_Components/Services'
+import Gallery from '../components/Section_Components/Gallery'
+import AboutBlog from '../components/Section_Components/AboutBlog'
 
 const Wrapper = styled.div`
 transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
