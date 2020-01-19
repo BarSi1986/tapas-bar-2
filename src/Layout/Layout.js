@@ -36,9 +36,11 @@ const theme = {
 const Layout = ({ children }) => {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [dishesClicked, setDishesClicked] = useState(false)
+    const [descriptionHide, setDescriptionHide] = useState(false)
 
     return (
-        <AppContext.Provider value={{ isOpen, setIsOpen }}>
+        <AppContext.Provider value={{ isOpen, setIsOpen, dishesClicked, setDishesClicked, descriptionHide, setDescriptionHide }}>
             <ThemeProvider
                 theme={theme}
             >

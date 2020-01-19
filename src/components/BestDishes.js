@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Header from '../components/H1_header'
 import Button from '../components/OutlinedButton'
+import AppContext from '../context/AppContext'
 
 const DishWrapper = styled.section`
 height: 90vh;
@@ -157,7 +158,13 @@ const Chevron = styled(Img)`
 
 const BestDishes = () => {
 
-    // const [Image, setImage] = useState(1)
+    const { dishesClicked, setDishesClicked, descriptionHide, setDescriptionHide } = useContext(AppContext)
+    const moveDishes = () => {
+        setDescriptionHide(!descriptionHide)
+        setTimeout(() => {
+            setDishesClicked(!dishesClicked)
+        }, 300)
+    }
 
     const data = useStaticQuery(graphql`
     query DishesImagesQuery {
@@ -192,44 +199,21 @@ const BestDishes = () => {
       }
     `)
 
-    const moveImage = () => {
-        const wrapper = document.querySelector(ImagesWrapper)
-        setTimeout(() => {
-            wrapper.classList.toggle('moved')
-        }, 300)
-    }
-
-    const sideEffects1 = () => {
-        const header = document.querySelector(DescriptionWrapper1)
-        header.classList.toggle('effect')
-    }
-
-    const sideEffects2 = () => {
-        const header = document.querySelector(DescriptionWrapper2)
-        header.classList.toggle('effect')
-    }
-
     return (
         <DishWrapper>
-            <ImagesWrapper>
+            <ImagesWrapper className={dishesClicked && "moved"}>
                 <div className="image image1">
                     <StyledImg
                         fluid={data.image1.childImageSharp.fluid}
                     />
 
-                    <DescriptionWrapper1>
+                    <DescriptionWrapper1 className={descriptionHide && 'effect'}>
                         <Header className="dish__header dish__header__1" text="Honey Chicken Curry" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias aliquid beatae in, voluptatum maiores ullam mollitia facere sint ab.</p>
                         <Button text="VIEW ALL" />
                     </DescriptionWrapper1>
 
-                    <button onClick={() => {
-                        moveImage()
-                        sideEffects1()
-                        setTimeout(() => {
-                            sideEffects2()
-                        }, 600)
-                    }} className="chevron chevron-right">
+                    <button className="chevron chevron-right" onClick={moveDishes}>
                         <Chevron
                             fluid={data.image3.childImageSharp.fluid}
                         />
@@ -241,19 +225,12 @@ const BestDishes = () => {
                         fluid={data.image2.childImageSharp.fluid}
                     />
 
-                    <DescriptionWrapper2>
+                    <DescriptionWrapper2 className={descriptionHide && 'effect'}>
                         <Header className="dish__header dish__header__1" text="Spicy Sesame Soup" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias aliquid beatae in, voluptatum maiores ullam mollitia facere sint ab.</p>
                         <Button text="VIEW ALL" />
                     </DescriptionWrapper2>
-                    <button onClick={() => {
-                        moveImage()
-                        sideEffects2()
-                        setTimeout(() => {
-                            sideEffects1()
-                        }, 600)
-
-                    }} className="chevron chevron-left">
+                    <button className="chevron chevron-left" onClick={moveDishes}>
                         <Chevron
                             fluid={data.image4.childImageSharp.fluid}
                         />
