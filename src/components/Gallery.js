@@ -68,6 +68,7 @@ const GalleryItem = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: initial;
         h3{
             letter-spacing: 10px;
             font-weight: bold;
