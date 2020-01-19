@@ -8,6 +8,7 @@ import Recepie from './Recepie'
 import Specials from './Specials'
 import BestDishes from './BestDishes'
 import Services from './Services'
+import Gallery from './Gallery'
 
 const Wrapper = styled.div`
 transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
@@ -26,6 +27,7 @@ const AppWrapper = () => {
             <Specials />
             <BestDishes />
             <Services />
+            <Gallery />
         </Wrapper>
     )
 }

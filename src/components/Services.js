@@ -7,9 +7,9 @@ const ServiceWrapper = styled.section`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 75%;
+    width: 80%;
     margin: auto;
-    padding: 40px;
+    padding: 60px;
 
     @media (max-width: 1000px) {
         width: 100%;

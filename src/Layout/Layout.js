@@ -22,7 +22,7 @@ const theme = {
     main_para: "#808080",
     secondary_header: "#FF7E66",
     primary_button: "#ff7d65",
-    background_one: "#FFE3DD",
+    background_one: "#FFF2EC",
 
     // fonts
     header1_font: "'Qwigley', cursive",
