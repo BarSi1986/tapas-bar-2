@@ -102,7 +102,6 @@ p{
     padding: 25px 0;
 }
 &.effect{
-    filter: blur(10px);
     bottom: 0;
     opacity: 0;
 }
@@ -113,8 +112,6 @@ p{
     }
 }
 `
-
-
 
 const DescriptionWrapper2 = styled.div`
 position: absolute;
@@ -128,11 +125,9 @@ p{
     font-size: 1.2em;
     padding: 25px 0;
 }
-    filter: blur(10px);
     opacity: 0;
     top: 0px;
 &.effect{
-    filter: blur(0px);
     top: 20px;
     opacity: 1;
 }
