@@ -10,6 +10,7 @@ import BestDishes from '../components/Section_Components/BestDishes'
 import Services from '../components/Section_Components/Services'
 import Gallery from '../components/Section_Components/Gallery'
 import AboutBlog from '../components/Section_Components/AboutBlog'
+import TheFood from '../components/Section_Components/TheFood'
 
 const Wrapper = styled.div`
 transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
@@ -30,6 +31,7 @@ const AppWrapper = () => {
             <Services />
             <Gallery />
             <AboutBlog />
+            <TheFood />
         </Wrapper>
     )
 }

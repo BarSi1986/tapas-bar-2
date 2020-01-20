@@ -13,6 +13,9 @@ width: 100%;
 background: transparent;
 position: relative;
 overflow: hidden;
+@media (max-width: 750px){
+    height: 80vh; 
+}
 `
 const ImagesWrapper = styled.div`
 transition: ${props => props.theme.main_transition};

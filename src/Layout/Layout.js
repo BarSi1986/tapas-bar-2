@@ -21,7 +21,7 @@ const theme = {
     main_white: "#FFFFFF",
     main_para: "#808080",
     secondary_header: "#FF7E66",
-    primary_button: "#ff7d65",
+    primary_button: "#ff7d66",
     background_one: "#FFF2EC",
 
     // fonts
