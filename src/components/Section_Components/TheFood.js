@@ -4,16 +4,30 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 const TheFoodWrapper = styled.section`
-    width: 80%;
+    width: 90%;
     height: 40vh;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: auto;
+    @media (max-width: 600px) {
+     margin-top: 30px;
+     width: 100%;
+ }
 `
 const FoodItem = styled.div`
- flex-grow: 1;
+ width: 20%;
  margin: 10px;
  position: relative;
  overflow: hidden;
+ @media (max-width: 1000px) {
+     width: 35%;
+     height: 40vh;
+ }
+ @media (max-width: 600px) {
+     width: 85%;
+     height: 40vh;
+ }
 `
 const StyledImg = styled(Img)`
     position: absolute !important;
