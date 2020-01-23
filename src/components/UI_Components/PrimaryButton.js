@@ -6,10 +6,10 @@ background: ${props => props.theme.primary_button};
 color: ${props => props.theme.main_white};
 font-family: ${props => props.theme.para1_font};
 border: none;
-padding: 20px 35px;
+padding: 15px 30px;
 font-size: 1em;
 font-weight: 400;
-margin: 45px 0;
+margin: 35px 0;
 cursor: pointer;
 position: relative;
 overflow: hidden;
@@ -35,9 +35,9 @@ outline: none;
             }
 `
 
-const PrimaryButton = ({ text }) => {
+const PrimaryButton = ({ text, className }) => {
     return (
-        <Button>
+        <Button className={className}>
             {text}
         </Button>
     )

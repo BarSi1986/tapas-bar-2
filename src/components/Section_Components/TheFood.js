@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 
 const TheFoodWrapper = styled.section`
     width: 90%;
-    height: 40vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -17,6 +16,7 @@ const TheFoodWrapper = styled.section`
 `
 const FoodItem = styled.div`
  width: 20%;
+ height: 40vh;
  margin: 10px;
  position: relative;
  overflow: hidden;
@@ -84,9 +84,11 @@ const HowToMake = styled.div`
         border: none;
         padding: 10px 25px;
         opacity: 0;
+        outline: none;
     }
 
     &:hover{
+
         height: 35vh;
         width: 150%;
         p{
@@ -107,7 +109,6 @@ const HowToMake = styled.div`
 `
 
 const TheFood = () => {
-
     const data = useStaticQuery(graphql`
     query TheFoodImagesQuery {
         image1: file(relativePath: {eq: "the_food1.jpg"}) {
@@ -140,7 +141,6 @@ const TheFood = () => {
           }
       }
     `)
-
 
     return (
         <TheFoodWrapper>
