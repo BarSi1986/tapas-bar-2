@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
+
 const TheFoodWrapper = styled.section`
     width: 90%;
     display: flex;
