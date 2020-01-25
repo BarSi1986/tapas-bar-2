@@ -12,6 +12,8 @@ import Gallery from '../components/Section_Components/Gallery'
 import AboutBlog from '../components/Section_Components/AboutBlog'
 import TheFood from '../components/Section_Components/TheFood'
 import Contact from '../components/Section_Components/Contact'
+import Map from '../components/Section_Components/Map'
+import Footer from '../components/Section_Components/Footer'
 
 const Wrapper = styled.div`
 transition: all 0.9s cubic-bezier(0.165, 0.84, 0.23, 0.995);
@@ -34,6 +36,8 @@ const AppWrapper = () => {
             <AboutBlog />
             <TheFood />
             <Contact />
+            <Map />
+            <Footer />
         </Wrapper>
     )
 }

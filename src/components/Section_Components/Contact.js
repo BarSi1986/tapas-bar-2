@@ -122,6 +122,7 @@ const ContactDetails = styled.div`
 
     @media (max-width: 750px) {
         flex-direction: column;
+        padding: 40px 0;
     }
 `
 

@@ -1,17 +1,18 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
+import AppContext from '../../context/AppContext'
 
 import logo from '../../images/logo.png'
-import menuOpen from '../../images/menu-icon-open.png'
-import menuClose from '../../images/menu-icon-close.png'
 
-import AppContext from '../../context/AppContext'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavWrapper = styled.section`
 overflow: hidden;
 width: 100%;
-height: 90px;
+height: 70px;
 position: fixed;
 top: 0;
 left: 0;
@@ -28,7 +29,7 @@ align-items: center;
     }
 .logo{
 
-    height: 100px;
+    height: 70px;
     padding-bottom: 10px;
     z-index: 20;
 }
@@ -82,14 +83,18 @@ align-items: center;
      display: none;   
     }
         position: absolute;
-        top: 20px;
-        right: 25px;
+        top: 0;
+        right: 0;
         list-style: none;
+        height: 100%;
+        width: 70px;
             button{
              cursor: pointer;
              outline: none;
              background: transparent;
              border: none;
+             height: 100%;
+             width: 100%;
              padding: 20px;
         }
     }
@@ -145,22 +150,30 @@ align-items: center;
     }
     .menuClose{
         position: absolute;
-        top: 2px;
-        right: 10px;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
         list-style: none;
         button{
             cursor: pointer;
             outline: none;
             background: transparent;
             border: none;
-            transform: rotate(180deg);
-            transition: .4s ease;
-            transition-delay: .2s;
-            padding: 20px;
+            width: 100%;
+            height: 100%;
         }
     }
 
 }
+`
+
+const StyledIcon = styled(FontAwesomeIcon)`
+font-size: 2.5em;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
 `
 
 const Navigation = () => {
@@ -195,7 +208,7 @@ const Navigation = () => {
 
             <li className=" menu menuOpen">
                 <button onClick={menuClicked}>
-                    <img width="32px" src={menuOpen} alt="close menu button" />
+                    <StyledIcon icon={faCaretDown} />
                 </button>
             </li>
 
@@ -228,7 +241,7 @@ const Navigation = () => {
 
                 <li className="menu menuClose">
                     <button onClick={menuClicked}>
-                        <img width="60px" src={menuClose} alt="close menu button" />
+                        <StyledIcon icon={faCaretUp} />
                     </button>
                 </li>
             </ul>
